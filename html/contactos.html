@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>TECH STORE</title>
+
+ <!-- Bootstrap  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+ <!-- css -->
+ 
+    <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+  <!-- HEADER / NAV -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Tech Store JYC</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+            </button>
+
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+             <li class="nav-item"><a class="nav-link active" aria-current="page" href="../INDEX.HTML">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="contactos.html">Contacto</a></li>
+             <li class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
+             <ul class="dropdown-menu">
+             <li><a class="dropdown-item" href="celulares.html">Celulares</a></li>
+               <li><a class="dropdown-item" href="cargadoresyauriculares.html">Cargadores y Auriculares</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="reparaciones.html">Reparaciones</a></li>
+              </ul>
+             </li>
+        </ul>
+
+          <form class="d-flex mt-2 mt-lg-0" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+         </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container my-5">
+    <div class="text-center mb-5">
+      <h1 class="mb-2">Tech Store</h1>
+      <h2 class="h5 text-muted mb-3">Cotiza la reparación de tu equipo</h2>
+      <p class="lead">Reparación y Accesorios: Tu celular en las mejores manos. Rápido y con garantía.</p>
+    </div>
+
+      <!-- SECCIÓN: CONTACTO - APLICACIÓN DE CSS GRID -->
+    <section id="contacto" class="container my-5">
+        <h2 class="text-center mb-4">Contáctanos y Cotiza tu Reparación</h2>
+
+        <!-- Contenedor GRID -->
+        <div class="contacto-grid-layout">
+
+            <!--  Columna del Formulario  -->
+            <div class="form-container">
+                <form class="p-4 shadow rounded bg-white">
+                    <h3 class="mb-4">Envíanos un Mensaje</h3>
+                    <!-- Nombre -->
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com">
+                    </div>
+
+                    <!-- Mensaje -->
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje o consulta de reparación..."></textarea>
+                    </div>
+
+                    <!-- Botón -->
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Enviar Consulta</button>
+                    </div>
+                </form>
+            </div>
+
+
+            <!-- 2. Columna de Información de Contacto -->
+            <div class="info-container p-4 shadow rounded bg-light">
+                <h3 class="mb-4">Nuestra Ubicación y Contacto</h3>
+                <p><i class="bi bi-geo-alt-fill me-2"></i>**Dirección:** Av. Principal 123, Ciudad.</p>
+                <p><i class="bi bi-telephone-fill me-2"></i>**Teléfono:** (55) 1234-5678</p>
+                <p><i class="bi bi-envelope-fill me-2"></i>**Email:** contacto@techstore.com</p>
+                
+                <h4 class="mt-4">Horarios de Atención</h4>
+                <p>Lun - Vie: 9:00 - 18:00</p>
+                <p>Sáb: 10:00 - 14:00</p>
+                <a href="#" class="btn btn-outline-dark mt-3 d-none d-md-inline-block">Ver en Mapa</a>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP (Usa position: fixed) -->
+  <a href="https://wa.me/tunumerodetelefono" target="_blank" class="whatsapp-float" aria-label="Chatear por WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+  </a>
+
+ <!-- FOOTER -->
+   <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p class="mb-0">Venta y Reparación de celulares. Todos los derechos reservados © 2025</p>
+   </footer>
+
+    <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

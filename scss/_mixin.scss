@@ -1,0 +1,71 @@
+// _mixins.scss
+
+
+@mixin accessory-image($height: 200px, $object-fit: cover) {
+  height: $height;
+  object-fit: $object-fit;
+  width: 100%;
+  display: block;
+}
+
+// Icono de servicio
+
+@mixin service-icon($size: 2.5rem, $color: #007bff) {
+  font-size: $size;
+  color: $color;
+  line-height: 1;
+  display: inline-block;
+}
+
+// Tarjeta con efecto "lift" al hover
+@mixin card-lift($radius: 12px, $transition: transform 0.3s ease-in-out, $lift: -5px) {
+  border-radius: $radius;
+  transition: $transition;
+
+  &:hover {
+    transform: translateY($lift);
+  }
+}
+
+// Botón flotante (ej. WhatsApp)
+@mixin float-action(
+  $size: 50px,
+  $right: 20px,
+  $bottom: 20px,
+  $bg: #25d366,
+  $hover-bg: #128c7e,
+  $color: #fff,
+  $shadow: 0 4px 8px rgba(0,0,0,0.3)
+) {
+  position: fixed;
+  bottom: $bottom;
+  right: $right;
+  width: $size;
+  height: $size;
+  background-color: $bg;
+  color: $color;
+  border-radius: 50%;
+  text-align: center;
+  line-height: $size; // centra verticalmente cuando es texto/ícono
+  font-size: ( $size / 25 ) * 1rem; // aproximación; puedes ajustar
+  box-shadow: $shadow;
+  z-index: 1000;
+  cursor: pointer;
+  transition: background-color .3s, transform .18s, box-shadow .18s;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-bg;
+    color: $color;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  }
+}
+
+// Layout full-page con grid (header - main - footer)
+@mixin full-page-grid($header-row: auto, $main-row: 1fr, $footer-row: auto) {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: $header-row $main-row $footer-row;
+  min-height: 100vh;
+}

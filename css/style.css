@@ -1,0 +1,175 @@
+
+/* ------------------------------------------- */
+/* 1. ESTILOS GENERALES e IMAGENES             */
+/* ------------------------------------------- */
+
+
+.imgaccesorios {
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla y cubriendo el espacio */
+    width: 100%;
+}
+.card-img-top {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover; /* o 'contain' */
+}
+/* Estilo para los íconos de servicio */
+.service-icon i {
+    font-size: 2.5rem; /* Iconos*/
+    color: #007bff; /* Color azul de Bootstrap */
+}
+
+
+.card {
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Pequeño efecto de levantamiento al pasar el mouse */
+}
+
+
+
+/* 2. IMPLEMENTACIÓN DE POSITION: FIXED        */
+
+
+.whatsapp-float {
+    /* POSICIONAMIENTO FIJO: se queda en la misma posición aunque el usuario haga scroll */
+    position: fixed; 
+    bottom: 20px; /* Separación de 20px desde la parte inferior */
+    right: 20px;  /* Separación de 20px desde la parte derecha */
+    
+    /* Estilos del botón */
+    width: 50px;
+    height: 50px;
+    background-color: #25d366; /* Color verde de WhatsApp */
+    color: white;
+    border-radius: 50%; /* Lo hace redondo */
+    text-align: center;
+    line-height: 50px; /* Centra el ícono verticalmente */
+    font-size: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para que destaque */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    transition: background-color 0.3s;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    color: white; /* Mantiene el color del icono blanco al pasar el mouse */
+}
+
+
+/* ------------------------------------------- */
+
+/* ------------------------------------------- */
+
+
+
+
+body {
+    display: grid;
+    /* Define 1 columna con el ancho del viewport */
+    grid-template-columns: 1fr; 
+    /* Define la disposición de las filas: header, main (que ocupa el espacio), footer */
+    grid-template-rows: auto 1fr auto; 
+    min-height: 100vh;
+}
+
+header {
+    grid-row: 1;
+}
+
+main {
+    grid-row: 2;
+}
+
+footer {
+    grid-row: 3;
+}
+/* ANIMACIONES Y TRANSICIONES -------------------------------------------------------------------*/
+
+/* 1) Gradiente animado para hero */
+.hero-gradient {
+  background: linear-gradient(270deg, #0d6efd 0%, #6610f2 50%, #ff7a59 100%);
+  background-size: 600% 600%;
+  animation: gradientShift 12s ease infinite;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.card {
+  border-radius: 12px;
+  transition: transform .28s cubic-bezier(.2,.9,.2,1), box-shadow .28s;
+  will-change: transform;
+}
+.card:hover,
+.card:focus-within {
+  transform: translateY(-8px) translateZ(0);
+  box-shadow: 0 18px 40px rgba(10,20,40,.18);
+}
+
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp .7s ease both;
+}
+
+/* 4) WhatsApp floating pulse (keyframes opcional) */
+@keyframes pulse {
+  0%   { transform: scale(1); box-shadow: 0 6px 18px rgba(0,0,0,.15); }
+  50%  { transform: scale(1.06); box-shadow: 0 10px 30px rgba(0,0,0,.18); }
+  100% { transform: scale(1); box-shadow: 0 6px 18px rgba(0,0,0,.15); }
+}
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#25D366,#128C7E);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+  transition: transform .18s, box-shadow .18s;
+  z-index: 1000;
+}
+
+.whatsapp-float.pulse { animation: pulse 2.8s infinite; }
+.whatsapp-float:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,.2); }
+
+/* 5) Botón CTA con gradiente y transform */
+.btn-cta {
+  background: linear-gradient(90deg,#0d6efd,#6610f2);
+  color: #fff;
+  padding: .6rem 1rem;
+  border-radius: .5rem;
+  border: none;
+  transition: transform .18s ease, filter .18s;
+  will-change: transform;
+}
+.btn-cta:hover { transform: translateY(-3px) scale(1.02); filter: brightness(1.03); }
+
+/* Accessibility: reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-gradient,
+  .fade-up,
+  .whatsapp-float.pulse,
+  .card,
+  .btn-cta {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TECH STORE - Celulares</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   <!-- CSS  -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+  <!-- HEADER / NAV  -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">Tech Store JYC</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+         </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!--html -->
+           <li class="nav-item"><a class="nav-link" href="../INDEX.HTML">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="contactos.html">Contacto</a></li>
+           <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item active" href="celulares.html">Celulares</a></li>
+                <li><a class="dropdown-item" href="cargadoresyauriculares.html">Cargadores y Auriculares</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="reparaciones.html">Reparaciones</a></li>
+             </ul>
+            </li>
+           </ul>
+
+         <form class="d-flex mt-2 mt-lg-0" role="search">
+             <input class="form-control me-2" type="search" placeholder="Buscar en Celulares" aria-label="Buscar">
+             <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+            </div>
+       </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container my-5">
+    <!-- BANNER O TÍTULO DE LA SECCIÓN -->
+    <div class="text-center p-4 mb-5 bg-light rounded shadow-sm">
+      <h1 class="display-5 fw-bold text-primary">Smartphones y Equipos Nuevos</h1>
+      <p class="lead">Descubre la última tecnología móvil de las mejores marcas. ¡Potencia tu día a día!</p>
+    </div>
+
+    <!-- FILTROS (OPCIONAL) -->
+    <div class="row mb-4 align-items-center">
+        <div class="col-md-6">
+            <h2 class="h4">Todos los Celulares</h2>
+        </div>
+        <div class="col-md-6 text-md-end">
+            <select class="form-select w-auto d-inline-block">
+                <option selected>Ordenar por...</option>
+                <option>Precio: Menor a Mayor</option>
+                <option>Precio: Mayor a Menor</option>
+                <option>Novedades</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- SECCIÓN: LISTADO DE PRODUCTOS (GRID DE BOOTSTRAP) -->
+    <section id="celulares-listado">
+      <div class="row g-4">
+        <!-- Celular 1 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 shadow-sm border-primary">
+           <img src="../img/iphone 15.webp" class="card-img-top imgaccesorios" alt="Iphone 15 rosado">
+            <div class="card-body text-center">
+              <h5 class="card-title text-primary">Iphone 15 Pro Max</h5>
+             <p class="card-text fw-bold">$ 1.500.000 ARS</p>
+             <p class="text-muted small">Cámara 48MP | Chip A17 Bionic</p>
+             <a href="#" class="btn btn-dark">Comprar</a>
+             </div>
+            </div>
+        </div>
+
+        <!-- Celular 2 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+     <div class="card h-100 shadow-sm">
+           <img src="../img/samsung galaxy s24 gris titanio.webp" class="card-img-top imgaccesorios" alt="Samsung Galaxy S24">
+            <div class="card-body text-center">
+              <h5 class="card-title">Samsung Galaxy S24</h5>
+              <p class="card-text fw-bold">$ 950.000 ARS</p>
+             <p class="text-muted small">Pantalla AMOLED | 8GB RAM</p>
+             <a href="#" class="btn btn-dark">Comprar</a>
+             </div>
+         </div>
+         </div>
+
+     <!-- Celular 3 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 shadow-sm">
+            <img src="../img/xiaomi 13.webp" class="card-img-top imgaccesorios" alt="Xiaomi 13T">
+             <div class="card-body text-center">
+              <h5 class="card-title">Xiaomi 13T Pro</h5>
+              <p class="card-text fw-bold">$ 720.000 ARS</p>
+              <p class="text-muted small">Carga Ultra Rápida | Lente Leica</p>
+             <a href="#" class="btn btn-dark">Comprar</a>
+           </div>
+          </div>
+          </div>
+        
+        <!-- Celular 4 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+             <div class="card h-100 shadow-sm">
+            <img src="../img/motorola edge 40.webp" class="card-img-top imgaccesorios" alt="Motorola Edge">
+             <div class="card-body text-center">
+               <h5 class="card-title">Motorola Edge 40</h5>
+               <p class="card-text fw-bold">$ 450.000 ARS</p>
+               <p class="text-muted small">Diseño Curvo | Batería 5000mAh</p>
+              <a href="#" class="btn btn-dark">Comprar</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+        
+      <!-- Paginación -->
+      <nav class="mt-5 d-flex justify-content-center" aria-label="Paginación de productos">
+          <ul class="pagination">
+              <li class="page-item disabled"><a class="page-link" href="#">Anterior</a></li>
+              <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+          </ul>
+      </nav>
+    </section>
+   </main>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP (Usa position: fixed) -->
+  <a href="https://wa.me/tunumerodetelefono" target="_blank" class="whatsapp-float" aria-label="Chatear por WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- FOOTER -->
+  <!-- Se corrigió la ruta del footer para consistencia con el estilo de tu index.html -->
+  <footer class="bg-dark text-white text-center py-3 mt-4">
+    <p class="mb-0">Venta y Reparación de celulares. Todos los derechos reservados © 2025</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

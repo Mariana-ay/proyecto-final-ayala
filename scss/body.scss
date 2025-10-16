@@ -1,0 +1,10 @@
+body {
+  display: grid;
+
+  /* Define 1 columna con el ancho del viewport */
+  grid-template-columns: 1fr;
+
+  /* Define la disposición de las filas: header, main (que ocupa el espacio), footer */
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
